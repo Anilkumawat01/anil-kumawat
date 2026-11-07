@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Anil Kumawat | Aspiring Cloud Engineer — AWS Portfolio</title>
+  <meta name="description" content="Personal portfolio of Anil Kumawat — B.Tech AI & Data Science student from Bikaner, Rajasthan. Exploring AWS, Cloud Computing, DevOps, and AI." />
+  <meta name="keywords" content="Anil Kumawat, Cloud Engineer, AWS, B.Tech, AI Data Science, Bikaner, DevOps, Portfolio, AWS Amplify" />
+  <meta name="author" content="Anil Kumawat" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Anil Kumawat | Aspiring Cloud Engineer — AWS Portfolio" />
+  <meta property="og:description" content="B.Tech AI & Data Science student exploring AWS, Cloud, DevOps & AI. Play my Cloud Journey runner game!" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://YOUR_AMPLIFY_URL.amplifyapp.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Anil Kumawat | Aspiring Cloud Engineer" />
+  <meta name="twitter:description" content="B.Tech AI & Data Science student. AWS Portfolio + Cloud Journey Runner Game!" />
+  <meta name="twitter:image" content="/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Preload critical assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════════ -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Anil Kumawat — back to top">
+        <span class="logo-initials">AK</span>
+        <span class="logo-text">Anil Kumawat</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#osi"      class="nav-link">🕊️ OSI Mission</a></li>
+        <li><a href="#aws"      class="nav-link">AWS</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-lite-toggle" id="liteToggle" aria-label="Toggle lite mode" title="Toggle lite mode (disables 3D effects)">
+          <span id="liteIcon">🌐</span> <span id="liteLabel">Lite</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ═══════════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════════ -->
+    <section id="hero" aria-label="Hero — introduction">
+      <!-- 3D/Canvas cloud background -->
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <!-- CSS fallback background (always visible, behind canvas) -->
+      <div class="hero-bg-fallback" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-avatar" aria-label="Anil Kumawat's avatar">
+          <div class="avatar-initials" id="heroAvatar">AK</div>
+        </div>
+
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Anil Kumawat</h1>
+        <p class="hero-tagline">Aspiring Cloud Engineer ☁️ <br class="tagline-break"/>B.Tech Student — AI &amp; Data Science</p>
+        <p class="hero-location">📍 Bikaner, Rajasthan, India</p>
+
+        <!-- DO NOT PRESS CTA -->
+        <div class="hero-dnp-wrap">
+          <button class="btn-do-not-press" id="openOSIHero" aria-label="Open Royal OSI Mission — educational OSI layers story">
+            <span class="dnp-skull">☠️</span>
+            <span class="dnp-main">
+              <span class="dnp-warn">⚠️ DO NOT</span>
+              <span class="dnp-press">PRESS ⚠️</span>
+            </span>
+            <span class="dnp-skull">☠️</span>
+          </button>
+          <p class="dnp-hint">Seriously. Don't. The royal pigeon will be very upset. 🕊️</p>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects →</a>
+          <!-- Resume button: shown only if config.resumePDF is set -->
+          <a href="#" class="btn btn-secondary" id="resumeBtn" style="display:none" target="_blank" rel="noopener noreferrer" aria-label="Download Anil's resume PDF">
+            📄 Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">Hire Me 🚀</a>
+        </div>
+
+        <div class="hero-socials" aria-label="Social links">
+          <!-- Rendered by JS from config.socials -->
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <span>Scroll to explore</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         ABOUT ME
+    ════════════════════════════════════════════════ -->
+    <section id="about" aria-label="About Me">
+      <div class="section-inner">
+        <div class="section-label">01 / About Me</div>
+        <h2 class="section-title">My Story ☁️</h2>
+
+        <div class="about-grid">
+          <!-- Bio -->
+          <div class="about-bio glass-card">
+            <div class="about-avatar-wrap">
+              <div class="about-avatar" id="aboutAvatar" aria-label="Anil Kumawat">
+                <span>AK</span>
+              </div>
+            </div>
+            <div class="about-text" id="aboutBio">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Quick Facts -->
+          <div class="about-facts">
+            <div class="facts-grid" id="quickFacts">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Timeline -->
+        <div class="education-section">
+          <h3 class="subsection-title">🎓 Education Timeline</h3>
+          <div class="edu-timeline" id="eduTimeline" role="list" aria-label="Education history">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certs-section" id="certsSection">
+          <h3 class="subsection-title">🏅 Achievements &amp; Certifications</h3>
+          <div class="certs-grid" id="certsGrid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SKILLS / TECH SUPERPOWERS
+    ════════════════════════════════════════════════ -->
+    <section id="skills" aria-label="Skills and Tech Superpowers">
+      <div class="section-inner">
+        <div class="section-label">02 / Tech Superpowers</div>
+        <h2 class="section-title">My Cloud Journey 🛤️</h2>
+        <p class="section-sub">Scroll through my learning path — from first line of code to Cloud Engineer.</p>
+      </div>
+
+      <!-- 3D Scroll Journey -->
+      <div class="journey-wrapper" id="journeyWrapper">
+        <div class="journey-progress" id="journeyProgress" aria-label="Journey progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-steps" id="progressSteps"></div>
+        </div>
+
+        <div class="journey-canvas-wrap">
+          <canvas id="journeyCanvas" aria-hidden="true"></canvas>
+          <!-- CSS fallback skill cards -->
+          <div class="journey-cards" id="journeyCards" aria-label="Skills journey">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- All Skills at a Glance -->
+      <div class="section-inner">
+        <h3 class="subsection-title" style="margin-top:4rem;">⚡ All Skills at a Glance</h3>
+        <p class="section-sub">Everything I work with — grouped for quick scanning.</p>
+        <div class="skills-grid" id="skillsGrid" aria-label="All skills grouped by category">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PROJECTS
+    ════════════════════════════════════════════════ -->
+    <section id="projects" aria-label="Projects and Achievements">
+      <div class="section-inner">
+        <div class="section-label">03 / Projects &amp; Achievements</div>
+        <h2 class="section-title">What I've Built 🚀</h2>
+        <p class="section-sub">Real projects — real problems solved.</p>
+        <div class="projects-grid" id="projectsGrid" aria-label="Project cards">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         OSI MISSION SECTION (anchor + launcher)
+    ════════════════════════════════════════════════ -->
+    <section id="osi" aria-label="The Royal OSI Message Delivery Mission">
+      <div class="section-inner">
+        <div class="section-label">04 / Creative Educational Feature</div>
+        <h2 class="section-title">The Royal OSI Mission 🕊️</h2>
+        <p class="section-sub">Maharani Padmavati sends a secret message to Maharawal Ratan Singh. Our royal pigeon carries it through all 7 OSI networking layers!</p>
+        <div class="osi-preview glass-card">
+          <div class="osi-preview-header">
+            <span class="royal-badge">👑 Royal Rajasthan meets Networking</span>
+            <h3>How The Internet Actually Works — Layer by Layer</h3>
+          </div>
+          <div class="osi-cast-preview">
+            <div class="cast-member">
+              <span class="cast-icon">👑</span>
+              <span class="cast-name">Maharani Padmavati</span>
+              <span class="cast-role">The Sender (Palace of Chittor)</span>
+            </div>
+            <div class="cast-arrow">➔ 🕊️ ➔</div>
+            <div class="cast-member">
+              <span class="cast-icon">👑</span>
+              <span class="cast-name">Maharawal Ratan Singh</span>
+              <span class="cast-role">The Receiver (Royal Battlefield)</span>
+            </div>
+          </div>
+          <div class="osi-preview-desc">
+            <p><strong>The Message:</strong> <span class="royal-quote">"महाराज, आप कहाँ हैं? ❤️ जल्दी वापस आइए!"</span></p>
+            <p>Watch how a simple text is packaged into data, compressed, encrypted, chunked into segments, given IP addresses, wrapped into frames, and blasted across physical wires as 0s and 1s — then unpacked in reverse!</p>
+          </div>
+          <div class="osi-preview-actions">
+            <button class="btn btn-primary btn-lg" id="openOSISection" aria-label="Launch The Royal OSI Mission interactive story">
+              🕊️ Launch Royal OSI Mission
+            </button>
+            <p class="osi-note">Interactive visual story · 7 layers · Quizzes · Reverse decapsulation · Revision dashboard</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         BUILT ON AWS
+    ════════════════════════════════════════════════ -->
+    <section id="aws" aria-label="Built on AWS — AWS services and architecture">
+      <div class="section-inner">
+        <div class="section-label">05 / Built on AWS</div>
+        <h2 class="section-title">AWS Architecture ☁️</h2>
+        <p class="section-sub">Every service listed here is genuinely used — no fake AWS logos.</p>
+
+        <!-- Architecture Diagram (inline SVG) -->
+        <div class="arch-diagram glass-card" role="img" aria-label="Architecture: GitHub to AWS Amplify CI/CD to CloudFront CDN to Visitor">
+          <div class="arch-svg-wrap">
+            <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" class="arch-svg" aria-hidden="true">
+              <!-- GitHub -->
+              <rect x="10" y="55" width="120" height="50" rx="10" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+              <text x="70" y="76" text-anchor="middle" fill="#f0f6fc" font-size="10" font-family="Inter,sans-serif" font-weight="600">GitHub</text>
+              <text x="70" y="90" text-anchor="middle" fill="#8b949e" font-size="9" font-family="Inter,sans-serif">Code Push</text>
+              <text x="70" y="103" text-anchor="middle" font-size="16">🐙</text>
+
+              <!-- Arrow 1 -->
+              <line x1="130" y1="80" x2="175" y2="80" stroke="#f97316" stroke-width="2" stroke-dasharray="4,3"/>
+              <polygon points="175,76 183,80 175,84" fill="#f97316"/>
+              <text x="156" y="72" text-anchor="middle" fill="#f97316" font-size="8" font-family="Inter,sans-serif">push</text>
+
+              <!-- Amplify CI/CD -->
+              <rect x="183" y="40" width="140" height="80" rx="10" fill="#0a1628" stroke="#3b82f6" stroke-width="2"/>
+              <text x="253" y="65" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Inter,sans-serif" font-weight="600">AWS Amplify</text>
+              <text x="253" y="80" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter,sans-serif">Hosting + CI/CD</text>
+              <text x="253" y="95" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Inter,sans-serif">npm ci → vite build</text>
+              <text x="253" y="110" text-anchor="middle" font-size="14">🟠</text>
+
+              <!-- Arrow 2 -->
+              <line x1="323" y1="80" x2="368" y2="80" stroke="#f97316" stroke-width="2" stroke-dasharray="4,3"/>
+              <polygon points="368,76 376,80 368,84" fill="#f97316"/>
+              <text x="345" y="72" text-anchor="middle" fill="#f97316" font-size="8" font-family="Inter,sans-serif">serves via</text>
+
+              <!-- CloudFront -->
+              <rect x="376" y="40" width="140" height="80" rx="10" fill="#0a1628" stroke="#3b82f6" stroke-width="2"/>
+              <text x="446" y="65" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Inter,sans-serif" font-weight="600">CloudFront CDN</text>
+              <text x="446" y="80" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter,sans-serif">Edge Locations</text>
+              <text x="446" y="95" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Inter,sans-serif">HTTPS + TLS</text>
+              <text x="446" y="110" text-anchor="middle" font-size="14">🌍</text>
+
+              <!-- Arrow 3 -->
+              <line x1="516" y1="80" x2="561" y2="80" stroke="#f97316" stroke-width="2" stroke-dasharray="4,3"/>
+              <polygon points="561,76 569,80 561,84" fill="#f97316"/>
+              <text x="538" y="72" text-anchor="middle" fill="#f97316" font-size="8" font-family="Inter,sans-serif">fast · secure</text>
+
+              <!-- Visitor -->
+              <rect x="569" y="55" width="120" height="50" rx="10" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
+              <text x="629" y="76" text-anchor="middle" fill="#86efac" font-size="10" font-family="Inter,sans-serif" font-weight="600">Visitor</text>
+              <text x="629" y="90" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter,sans-serif">You / Judge 👋</text>
+              <text x="629" y="103" text-anchor="middle" font-size="14">🧑‍⚖️</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Services List -->
+        <div class="aws-services-grid" id="awsServicesGrid" aria-label="AWS services used">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Learnings & Challenges -->
+        <div class="aws-learnings-grid">
+          <div class="glass-card aws-learnings-card">
+            <h3>💡 What I Learned</h3>
+            <ul id="awsLearnings" role="list">
+              <!-- Rendered by JS -->
+            </ul>
+          </div>
+          <div class="glass-card aws-learnings-card">
+            <h3>🧩 Challenges &amp; Fixes</h3>
+            <ul id="awsChallenges" role="list">
+              <!-- Rendered by JS -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CONTACT
+    ════════════════════════════════════════════════ -->
+    <section id="contact" aria-label="Contact and social links">
+      <div class="section-inner">
+        <div class="section-label">06 / Let's Connect</div>
+        <h2 class="section-title">Hire Me / Say Hi 👋</h2>
+        <p class="section-sub contact-cta">
+          Open to internships and cloud/DevOps opportunities.<br/>
+          I'm actively building, learning, and ready to contribute.
+        </p>
+
+        <div class="contact-email-wrap">
+          <a href="mailto:anil707396@gmail.com" class="contact-email-link" aria-label="Send email to Anil Kumawat">
+            <svg class="email-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"/></svg>
+            <span class="email-address">anil707396@gmail.com</span>
+          </a>
+          <button class="btn-copy-email" id="copyEmail" aria-label="Copy email address to clipboard">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy</span>
+          </button>
+          <span class="copy-confirm" id="copyConfirm" aria-live="polite" role="status">Copied!</span>
+        </div>
+
+        <div class="social-links-grid" id="socialLinksGrid" aria-label="Social media and professional profiles">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer id="footer" aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">AK</span>
+        <span>Anil Kumawat</span>
+      </div>
+      <div class="footer-center">
+        <span class="aws-badge" title="Hosted on AWS Amplify">
+          🟠 Built on AWS Amplify
+        </span>
+        <span class="footer-copy">© 2026 Anil Kumawat</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Anilkumawat01/cloud-journey-portfolio" target="_blank" rel="noopener noreferrer" aria-label="View portfolio source code on GitHub">
+          GitHub Repo
+        </a>
+        <a href="#hero" aria-label="Back to top">↑ Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       FLOATING DO NOT PRESS BUTTON (always visible)
+  ════════════════════════════════════════════════ -->
+  <button class="floating-dnp-btn" id="floatingDNPBtn" aria-label="DO NOT PRESS — Royal OSI Mission" title="DO NOT PRESS! ⚠️">
+    <span class="float-icon">⚠️</span>
+    <span class="float-text">DO NOT PRESS</span>
+  </button>
+
+  <!-- ═══════════════════════════════════════════════
+       ROYAL OSI MISSION MODAL (fullscreen interactive)
+  ════════════════════════════════════════════════ -->
+  <div class="osi-modal" id="osiModal" role="dialog" aria-modal="true" aria-label="The Royal OSI Message Delivery Mission" hidden>
+    <div class="osi-modal-inner">
+      <header class="osi-modal-header">
+        <div class="osi-header-left">
+          <span class="royal-crest">👑</span>
+          <div>
+            <div class="osi-header-title">The Royal OSI Message Delivery Mission</div>
+            <div class="osi-header-sub">Chittorgarh Palace ➔ Battlefield of Mewar</div>
+          </div>
+        </div>
+        <div class="osi-header-right">
+          <div class="osi-stepper" id="osiStepper">
+            <!-- Rendered by JS: intro, l7..l1, reverse, dashboard -->
+          </div>
+          <button class="btn-close-osi" id="closeOSI" aria-label="Close mission (Esc)">✕</button>
+        </div>
+      </header>
+
+      <!-- Main Stage -->
+      <div class="osi-stage" id="osiStage">
+        <!-- Content injected dynamically by osi-experience.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
