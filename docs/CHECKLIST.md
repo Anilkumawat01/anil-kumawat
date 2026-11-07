@@ -113,7 +113,7 @@
 | Copy email | (button) | | |
 | GreenCloud GitHub | https://github.com/Anilkumawat01/green-cloud-Ai | | |
 | GreenCloud Live | https://greencloud-5vl7b2mmn-anil01.vercel.app/ | | |
-| Portfolio GitHub | https://github.com/Anilkumawat01/cloud-journey-portfolio | | |
+| Portfolio GitHub | https://github.com/Anilkumawat01/anil-kumawat | | |
 | Footer GitHub | (same as above) | | |
 
 ---

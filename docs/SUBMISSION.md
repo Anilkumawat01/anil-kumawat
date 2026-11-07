@@ -4,7 +4,7 @@
 **Builder:** Anil Kumawat  
 **Challenge:** Build Your Tech Superpower  
 **Live URL:** `https://YOUR_AMPLIFY_URL.amplifyapp.com` ← *Update after deploy*  
-**GitHub:** `https://github.com/Anilkumawat01/cloud-journey-portfolio`
+**GitHub:** `https://github.com/Anilkumawat01/anil-kumawat`
 
 ---
 
@@ -130,7 +130,7 @@ Before final submission, capture and attach these screenshots:
 | Resource | URL |
 |---|---|
 | Live Portfolio | `https://YOUR_AMPLIFY_URL.amplifyapp.com` |
-| Portfolio GitHub | `https://github.com/Anilkumawat01/cloud-journey-portfolio` |
+| Portfolio GitHub | `https://github.com/Anilkumawat01/anil-kumawat` |
 | GreenCloud AI (live) | https://greencloud-5vl7b2mmn-anil01.vercel.app/ |
 | GreenCloud AI (GitHub) | https://github.com/Anilkumawat01/green-cloud-Ai |
 | AWS Builder Profile | https://builder.aws.com?inviteId=d04eceb2-954b-4ae7-99f7-6532427c593c |

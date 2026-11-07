@@ -184,7 +184,7 @@ export const CONFIG = {
         "This portfolio — a single-page, scroll-driven 3D storytelling site with an interactive 'DO NOT PRESS' educational feature: The Royal OSI Message Delivery Mission (Maharani Padmavati ➔ Maharawal Ratan Singh). Deployed on AWS Amplify Hosting.",
       impact: "Built & deployed on AWS Amplify; demonstrates full cloud deployment pipeline.",
       tech: ["Vite", "Vanilla JS", "Three.js", "AWS Amplify", "CloudFront"],
-      github: "https://github.com/Anilkumawat01/cloud-journey-portfolio", // ADD: update with actual repo URL
+      github: "https://github.com/Anilkumawat01/anil-kumawat",
       live: "",   // ADD: Amplify live URL after deploy
       icon: "🚀",
       featured: true,

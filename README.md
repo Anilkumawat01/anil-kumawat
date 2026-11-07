@@ -86,8 +86,8 @@ aws/
 
 ```bash
 # 1. Clone
-git clone https://github.com/Anilkumawat01/cloud-journey-portfolio
-cd cloud-journey-portfolio
+git clone https://github.com/Anilkumawat01/anil-kumawat
+cd anil-kumawat
 
 # 2. Install
 npm install
